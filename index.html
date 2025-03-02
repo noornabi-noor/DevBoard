@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+</head>
+<body >
+
+    <header>
+        <nav class="border-2 border-solid p-4 bg-[rgb(255,255,255)] rounded-lg px-4">
+            <div class="flex justify-between">
+                
+                    <div class="flex items-center gap-x-4 px-8">
+                        <img src="assets/logo.png" alt="">
+                        <h1 class="bg-[rgb(0, 48, 60)] text-3xl">Dev<span class="font-bold">Board</span> </h1>
+                    </div>
+
+                    <div class="flex items-center gap-x-14">
+
+                        <div class="flex items-center gap-x-4">
+                            <img src="assets/checkbox.png" alt="">
+                            <h2 id="CheckNumber" class="text-2xl font-bold">23</h2>
+                        </div>
+
+                        <button id="themeButton"><img src="assets/theme-btn.png"  alt="Theme Button" ></button>
+                        
+                    </div>
+                
+            </div>
+        </nav>
+        
+    </header>
+
+    <main class="mt-10">
+        <div class="flex justify-between ">
+
+            <div>
+
+                <div class="flex justify-between px-8 w-[1150px]">
+
+                    <div class="flex gap-6 justify-center items-center w-[250px] h-[102px] bg-[rgb(244,247,255)] rounded-lg shadow">
+                        <img src="assets/checkbox.png" alt="">
+                        <div>
+                            <h6 class="text-[16px] text-gray-500">Task Assigned</h6>
+                            <h2 id="taskNumber" class="text-2xl font-bold text-gray-800">06</h2>
+                        </div>
+                    </div>
+                    
+
+                    <button id="discoverBtn">
+                        <div class="flex gap-6 items-center justify-center w-[445px] h-[102px] bg-[linear-gradient(130.70deg,_rgb(55,82,253)_0.419%,_rgb(108,127,250)_52.66%,_rgb(155,168,248)_99.733%)] rounded-lg shadow">
+                            <img src="assets/board.png" alt="">
+                            <div>
+                                <h6 class="font-bold text-[rgb(255,255,255)]">Discover Something <br> New Today!</h6>
+                            </div>
+                        </div>
+                    </button>
+
+                    <div class="flex gap-6 items-center justify-center w-[250px] h-[102px] bg-[rgb(244,247,255)] rounded-lg shadow">
+                        <img src="assets/calender.png" alt="">
+                        <div>
+                            <h5 id="dayName" class="text-[20px] text-gray-700"></h5>
+                            <h2 id="fullDate" class="text-[20px] font-semibold"></h2>
+                        </div>
+                    </div>
+                    
+            </div>
+
+            <div class="mt-[51px] px-8 grid grid-cols-3 gap-6">
+
+                <div class="task-container w-[350px] bg-[rgb(244,247,255)] rounded-lg p-4 shadow-md">
+                    <p class="text-[15px] text-[rgb(0,48,60)] font-medium">ShopEase</p>
+            
+                    <h1 class="mt-3 text-[20px] font-semibold text-[rgb(0,48,60)] leading-snug">
+                        Fix Mobile Button Issue
+                    </h1>
+            
+                    <p class="mt-3 text-[15px] text-gray-700 leading-relaxed box-border border border-dashed border-transparent rounded-lg bg-white">
+                        Debug using Chrome DevTools, check for overlapping elements, update CSS variables and ensure onClick works properly.
+                    </p>
+            
+                    <div class="flex justify-between items-center mt-6">
+                        <div>
+                            <p class="text-[13px] text-gray-500">Deadline</p>
+                            <h5 class="text-[15px] text-[rgb(0,48,60)] font-semibold">21 March 2025</h5>
+                        </div>
+                        <button id="completeButton1" class="completeButton  bg-[rgb(55,82,253)] rounded-lg px-4 py-2 text-white font-semibold shadow-sm">
+                            Completed
+                        </button>
+                    </div>
+                </div>
+                            
+                    
+                    <div class="task-container w-[350px] bg-[rgb(244,247,255)] rounded-lg p-4 shadow-md">
+                        <p class="text-[15px] text-[rgb(0,48,60)] font-medium">CloudSync</p>
+                
+                        <h1 class="mt-3 text-[20px] font-semibold text-[rgb(0,48,60)] leading-snug">
+                            Add Dark Mode
+                        </h1>
+                
+                        <p class="mt-3 text-[15px] text-gray-700 leading-relaxed box-border border border-dashed border-transparent rounded-lg bg-white">
+                            Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+                        </p>
+                
+                        <div class="flex justify-between items-center mt-6">
+                            <div>
+                                <p class="text-[13px] text-gray-500">Deadline</p>
+                                <h5 class="text-[15px] text-[rgb(0,48,60)] font-semibold">25 March 2025</h5>
+                            </div>
+                            <button id="completeButton2" class="completeButton bg-[rgb(55,82,253)] rounded-lg px-4 py-2 text-white font-semibold shadow-sm">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="task-container w-[350px] bg-[rgb(244,247,255)] rounded-lg p-4 shadow-md">
+                        <p class="text-[15px] text-[rgb(0,48,60)] font-medium">SwiftPay</p>
+                
+                        <h1 class="mt-3 text-[20px] font-semibold text-[rgb(0,48,60)] leading-snug">
+                            Optimize Home Page
+                        </h1>
+                
+                        <p class="mt-3 text-[15px] text-gray-700 leading-relaxed box-border border border-dashed border-transparent rounded-lg bg-white">
+                            Reduce requests, optimize CSS, and use CSS variables. Improve Dark Mode, accessibility, and Chrome DevTools debugging.
+                        </p>
+                
+                        <div class="flex justify-between items-center mt-6">
+                            <div>
+                                <p class="text-[13px] text-gray-500">Deadline</p>
+                                <h5 class="text-[15px] text-[rgb(0,48,60)] font-semibold">30 March 2025</h5>
+                            </div>
+                            <button id="completeButton3" class="completeButton bg-[rgb(55,82,253)] rounded-lg px-4 py-2 text-white font-semibold shadow-sm">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="task-container w-[350px] bg-[rgb(244,247,255)] rounded-lg p-4 shadow-md">
+                        <p class="text-[rgb(0,48,60)] text-[15px] font-medium">Meta</p>
+                        
+                        <h1 class="mt-3 text-[20px] font-semibold text-[rgb(0,48,60)] leading-snug">
+                            Add new emoji 🤲
+                        </h1>
+                    
+                        <p class="mt-3 text-[15px] text-gray-700 leading-relaxed box-border border border-dashed border-transparent rounded-lg bg-white">
+                            Minimize requests, optimize assets, enhance Dark Mode, improve responsiveness, and debug with Chrome DevTools.
+                        </p>
+                    
+                        <div class="flex justify-between items-center mt-6">
+                            <div>
+                                <p class="text-[13px] text-gray-500">Deadline</p>
+                                <h5 class="text-[15px] text-[rgb(0,48,60)] font-semibold">05 April 2025</h5>
+                            </div>
+                            <button id="completeButton4" class="completeButton bg-[rgb(55,82,253)] rounded-lg px-4 py-2 text-white font-semibold shadow-sm">
+                                Completed
+                            </button>
+                        </div>
+                    </div>
+    
+                        
+                        <div class="task-container w-[350px] bg-[rgb(244,247,255)] rounded-lg p-4 shadow-md">
+                            <p class="text-[15px] text-[rgb(0,48,60)] font-medium">Google LLC</p>
+                    
+                            <h1 class="mt-3 text-[20px] font-semibold text-[rgb(0,48,60)] leading-snug">
+                                Integrate OpenAI API
+                            </h1>
+                    
+                            <p class="mt-3 text-[15px] text-gray-700 leading-relaxed box-border border border-dashed border-transparent rounded-lg bg-white">
+                                Set up API keys, send requests, handle responses, and optimize for performance better and security perfectly.
+                            </p>
+                    
+                            <div class="flex justify-between items-center mt-6">
+                                <div>
+                                    <p class="text-[13px] text-gray-500">Deadline</p>
+                                    <h5 class="text-[15px] text-[rgb(0,48,60)] font-semibold">15 April 2025</h5>
+                                </div>
+                                <button id="completeButton5" class="completeButton bg-[rgb(55,82,253)] rounded-lg px-4 py-2 text-white font-semibold shadow-sm">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="task-container w-[350px] bg-[rgb(244,247,255)] rounded-lg p-4 shadow-md">
+                            <p class="text-[15px] text-[rgb(0,48,60)] font-medium">Glassdoar</p>
+                    
+                            <h1 class="mt-3 text-[20px] font-semibold text-[rgb(0,48,60)] leading-snug">
+                                Improve Job searching
+                            </h1>
+                    
+                            <p class="mt-3 text-[15px] text-gray-700 leading-relaxed box-border border border-dashed border-transparent rounded-lg bg-white">
+                                Optimize resumes, use job boards, network effectively, and tailor applications for better opportunities.
+                            </p>
+                    
+                            <div class="flex justify-between items-center mt-6">
+                                <div>
+                                    <p class="text-[13px] text-gray-500">Deadline</p>
+                                    <h5 class="text-[15px] text-[rgb(0,48,60)] font-semibold">01 May 2025</h5>
+                                </div>
+                                <button id="completeButton6" class="completeButton bg-[rgb(55,82,253)] rounded-lg px-4 py-2 text-white font-semibold shadow-sm">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+            </div>
+            
+            </div>
+
+
+            <div id="taskList" class="w-[310px] h-screen bg-gray-100 p-6 rounded-lg shadow-md">
+                
+                 <div class="flex flex-col items-center">
+                    <div  class="flex items-center gap-4 mb-6">
+                        <img src="assets/activity.png" alt="Activity" class="w-6 h-6">
+                        <p class="text-[18px] font-semibold text-gray-800">Activity Log</p>
+                    </div>
+                    
+                    <button id="clearHistoryBtn" class="bg-[rgb(55,82,253)] rounded-lg px-4 py-2 text-white font-semibold shadow-md hover:bg-[rgb(45,72,243)] ">
+                        Clear History
+                    </button>
+                    
+                 </div>
+            
+            </div>
+
+        </div>
+    </main>
+
+    <script src="JS_File/completed.js"></script>
+
+    <script src="JS_File/theme.js"></script>
+
+    <script src="JS_File/curDate.js"></script>
+
+    <script src="JS_File/discoverBtn.js"></script>
+
+</body>
+</html>

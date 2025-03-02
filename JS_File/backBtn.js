@@ -1,4 +1,3 @@
-document.getElementById("backBtn").addEventListener("click", function(event) {
+document.getElementById("backBtn").addEventListener("click", function() {
     window.location.href = "index.html"; 
-    event.preventDefault();
 });

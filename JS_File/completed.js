@@ -50,7 +50,7 @@ function setAlertOnClickById(elementId) {
 
             let newTaskMessage = document.createElement("p");
             newTaskMessage.className = "text-[15px] text-gray-700 leading-relaxed bg-white p-4 mt-6 rounded-lg shadow";
-            newTaskMessage.innerHTML = `You completed the task <span class="font-semibold text-gray-900">"${taskTitle}"</span> at <span class="text-blue-600">${formattedTime}</span>.`;
+            newTaskMessage.innerHTML = `You completed the task <span class="font-semibold text-gray-900">${taskTitle}</span> at <span class="text-blue-600">${formattedTime}</span>.`;
 
             taskList.appendChild(newTaskMessage);
 

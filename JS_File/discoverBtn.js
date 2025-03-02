@@ -1,4 +1,3 @@
-document.getElementById("discoverBtn").addEventListener("click", function(event) {
+document.getElementById("discoverBtn").addEventListener("click", function() {
     window.location.href = "discover.html"; 
-    event.preventDefault();
 });
